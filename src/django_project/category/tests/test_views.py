@@ -220,7 +220,7 @@ class TestUpdatePartialAPI:
             "id": ["Must be a valid UUID."]
         }
 
-    def test_when_payload_is_valid_then_update_category_and_return_204(self, category_movie: Category, category_repository: DjangoORMCategoryRepository):
+    def test_when_payload_has_only_name_then_update_category_and_return_204(self, category_movie: Category, category_repository: DjangoORMCategoryRepository):
         category_repository.save(category_movie)
         url = f"/api/categories/{category_movie.id}/"
 
@@ -245,3 +245,55 @@ class TestUpdatePartialAPI:
         assert updated_category.name == "Serie"
         assert updated_category.description == "movie description"
         assert updated_category.is_active is True
+
+    def test_when_payload_has_only_description_then_update_category_and_return_204(self, category_movie: Category, category_repository: DjangoORMCategoryRepository):
+        category_repository.save(category_movie)
+        url = f"/api/categories/{category_movie.id}/"
+
+        response = APIClient().patch(
+            url,
+            data={
+                "description": "Serie description",
+            }
+        )
+
+        assert response.status_code == 204
+
+        expected_category = Category(
+            id=category_movie.id,
+            name=category_movie.name,
+            description=category_movie.description,
+            is_active=True
+        )
+
+        updated_category = category_repository.get_by_id(category_movie.id)
+
+        assert updated_category.name == "movie"
+        assert updated_category.description == "Serie description"
+        assert updated_category.is_active is True
+
+    def test_when_payload_has_only_is_active_then_update_category_and_return_204(self, category_movie: Category, category_repository: DjangoORMCategoryRepository):
+        category_repository.save(category_movie)
+        url = f"/api/categories/{category_movie.id}/"
+
+        response = APIClient().patch(
+            url,
+            data={
+                "is_active": False,
+            }
+        )
+
+        assert response.status_code == 204
+
+        expected_category = Category(
+            id=category_movie.id,
+            name=category_movie.name,
+            description=category_movie.description,
+            is_active=True
+        )
+
+        updated_category = category_repository.get_by_id(category_movie.id)
+
+        assert updated_category.name == "movie"
+        assert updated_category.description == "movie description"
+        assert updated_category.is_active is False
