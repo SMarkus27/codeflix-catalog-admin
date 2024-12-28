@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d4b9aa70-f42a-4436-b329-c411a059ea18" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../Django-ToDo" beforeDir="false" afterPath="$PROJECT_DIR$/../Django-ToDo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Django_Blog" beforeDir="false" afterPath="$PROJECT_DIR$/../Django_Blog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Login_System" beforeDir="false" afterPath="$PROJECT_DIR$/../Login_System" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Weather_App" beforeDir="false" afterPath="$PROJECT_DIR$/../Weather_App" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../challenge-constancia" beforeDir="false" afterPath="$PROJECT_DIR$/../challenge-constancia" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../coding-problem" beforeDir="false" afterPath="$PROJECT_DIR$/../coding-problem" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dash-workout-service" beforeDir="false" afterPath="$PROJECT_DIR$/../dash-workout-service" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dev-camper-api-typescript" beforeDir="false" afterPath="$PROJECT_DIR$/../dev-camper-api-typescript" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django_crm/django_crm" beforeDir="false" afterPath="$PROJECT_DIR$/../django_crm/django_crm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../file-management-system" beforeDir="false" afterPath="$PROJECT_DIR$/../file-management-system" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fullcycle" beforeDir="false" afterPath="$PROJECT_DIR$/../fullcycle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../my_rango" beforeDir="false" afterPath="$PROJECT_DIR$/../my_rango" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../perfect-pay-service" beforeDir="false" afterPath="$PROJECT_DIR$/../perfect-pay-service" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../places_api" beforeDir="false" afterPath="$PROJECT_DIR$/../places_api" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../scrapping_olx/Projeto_Imoveis_SP" beforeDir="false" afterPath="$PROJECT_DIR$/../scrapping_olx/Projeto_Imoveis_SP" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ticket_reservation" beforeDir="false" afterPath="$PROJECT_DIR$/../ticket_reservation" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="2q2Ama43UuabZNJbMtevEBVyC5P" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python tests.Python tests for test_repository.TestSave.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for tests.TestCategoryAPI.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;develop&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/marcus/Desktop/Tudo/Programacao/projetos/codeflix-catalog-admin&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/core/category/tests/application/integration" />
+      <recent name="$PROJECT_DIR$/src/core/category/application/use_cases" />
+      <recent name="$PROJECT_DIR$/src/core/category/application" />
+      <recent name="$PROJECT_DIR$/src/core/category/tests/application/unit" />
+      <recent name="$PROJECT_DIR$/src/core/category/tests/infra" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src/django_project/category/tests" />
+      <recent name="$PROJECT_DIR$/src/core/category/domain" />
+      <recent name="$PROJECT_DIR$/src/core/category/application/use_cases" />
+      <recent name="$PROJECT_DIR$/src/core/category/tests/application/unit" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python tests.Python tests for test_repository.TestSave">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="codeflix-catalog-admin" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for src.django_project.category.tests.test_views.TestCategoryAPI" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="codeflix-catalog-admin" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/django_project/category" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;src.django_project.category.tests.test_views.TestCategoryAPI&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for test_repository.TestSave" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="codeflix-catalog-admin" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/django_project/category/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_repository.TestSave&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python tests.Python tests for test_repository.TestSave" />
+        <item itemvalue="Python tests.Python tests for src.django_project.category.tests.test_views.TestCategoryAPI" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d4b9aa70-f42a-4436-b329-c411a059ea18" name="Changes" comment="" />
+      <created>1733850458120</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1733850458120</updated>
+    </task>
+    <servers />
+  </component>
+</project>
