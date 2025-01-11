@@ -100,7 +100,7 @@ class TestAddCategory:
         category_id = uuid4()
 
         assert category_id not in genre.categories
-        genre.add_category(uuid4())
+        genre.add_category(category_id)
 
         assert category_id in genre.categories
 
