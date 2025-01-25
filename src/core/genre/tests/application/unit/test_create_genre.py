@@ -41,7 +41,7 @@ class TestCreateGenre:
         use_case = CreateGenre(genre_repository=mock_genre_repository, category_repository=mock_empty_category_repository)
 
         category_id = uuid4()
-        input = CreateGenre.Input(name="Action", category_ids={category_id})
+        input = CreateGenre.Input(name="Action", categories={category_id})
 
         with pytest.raises(RelatedCategoriesNotFound):
             use_case.execute(input)
@@ -50,14 +50,14 @@ class TestCreateGenre:
         use_case = CreateGenre(genre_repository=mock_genre_repository, category_repository=mock_category_repository_with_categories)
 
         with pytest.raises(InvalidGenre, match="name cannot be empty"):
-            use_case.execute(CreateGenre.Input(name="", category_ids={movie_category.id}))
+            use_case.execute(CreateGenre.Input(name="", categories={movie_category.id}))
 
 
     def test_when_created_genre_is_valid_and_categories_exist_then_save_genre(self, movie_category, series_category, mock_category_repository_with_categories, mock_genre_repository):
         use_case = CreateGenre(genre_repository=mock_genre_repository, category_repository=mock_category_repository_with_categories)
 
-        category_ids = {movie_category.id, series_category.id}
-        input = CreateGenre.Input(name="Action", category_ids=category_ids)
+        categories = {movie_category.id, series_category.id}
+        input = CreateGenre.Input(name="Action", categories=categories)
 
         use_case.execute(input)
 

@@ -16,7 +16,7 @@ class CreateGenre:
     class Input:
         name: str
         is_active: bool = True
-        category_ids: set[UUID] = field(default_factory=set)
+        categories: set[UUID] = field(default_factory=set)
 
 
     @dataclass
@@ -25,16 +25,16 @@ class CreateGenre:
 
 
     def execute(self,  input: Input):
-        category_ids = {category.id for category in self.category_repository.list()}
+        categories = {category.id for category in self.category_repository.list()}
 
-        if not input.category_ids.issubset(category_ids):
-            raise RelatedCategoriesNotFound(f"Categories not found: {input.category_ids - category_ids}")
+        if not input.categories.issubset(categories):
+            raise RelatedCategoriesNotFound(f"Categories with provided IDs not found: {input.categories - categories}")
 
         try:
             genre = Genre(
                 name=input.name,
                 is_active=input.is_active,
-                categories=input.category_ids
+                categories=input.categories
             )
 
         except ValueError as e:

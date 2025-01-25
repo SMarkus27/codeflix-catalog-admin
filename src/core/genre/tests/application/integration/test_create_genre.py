@@ -31,7 +31,7 @@ class TestCreateGenre:
 
         input = CreateGenre.Input(
             name="Action",
-            category_ids={movie_category.id, series_category.id}
+            categories={movie_category.id, series_category.id}
         )
 
         output = use_case.execute(input)
@@ -50,7 +50,7 @@ class TestCreateGenre:
 
         input = CreateGenre.Input(
             name="Action",
-            category_ids={uuid4()}
+            categories={uuid4()}
         )
 
         with pytest.raises(RelatedCategoriesNotFound):
