@@ -1,12 +1,10 @@
-from unittest.mock import create_autospec
 from uuid import UUID
 
 import pytest
 
 from src.core.cast_member.application.exceptions import InvalidCastMember
 from src.core.cast_member.application.use_cases.create_cast_member import CreateCastMember, CreateCastMemberRequest
-from src.core.cast_member.domain.cast_member import CastMember, CastMemberType
-from src.core.cast_member.domain.cast_member_repository import CastMemberRepository
+from src.core.cast_member.domain.cast_member import CastMemberType
 from src.core.cast_member.infra.in_memory_cast_member_repository import InMemoryCastMemberRepository
 
 
