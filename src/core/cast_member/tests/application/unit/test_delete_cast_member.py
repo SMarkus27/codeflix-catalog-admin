@@ -12,7 +12,7 @@ from src.core.cast_member.domain.cast_member_repository import CastMemberReposit
 
 class TestDeleteCastMember:
 
-    def test_delete_cast_member_when_cast_not_exist(self):
+    def test_delete_cast_member_when_cast_not_exist_raise_exception(self):
         mock_cast_member_repository = create_autospec(CastMemberRepository)
         mock_cast_member_repository.get_by_id.return_value = None
 
