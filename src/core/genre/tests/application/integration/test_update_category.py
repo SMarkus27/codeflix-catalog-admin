@@ -29,13 +29,13 @@ class TestUpdateGenre:
 
         genre_repository.save(genre)
 
-        use_case = UpdateGenre(genre_repository)
+        use_case = UpdateGenre(genre_repository, category_repository)
 
         input = UpdateGenre.Input(
             id=genre.id,
             name="Terror",
             is_active=True,
-            category_ids={movie_category.id}
+            categories={movie_category.id}
         )
 
         use_case.execute(input)
