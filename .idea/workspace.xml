@@ -4,23 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d4b9aa70-f42a-4436-b329-c411a059ea18" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../Django-ToDo" beforeDir="false" afterPath="$PROJECT_DIR$/../Django-ToDo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Django_Blog" beforeDir="false" afterPath="$PROJECT_DIR$/../Django_Blog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Login_System" beforeDir="false" afterPath="$PROJECT_DIR$/../Login_System" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Weather_App" beforeDir="false" afterPath="$PROJECT_DIR$/../Weather_App" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../challenge-constancia" beforeDir="false" afterPath="$PROJECT_DIR$/../challenge-constancia" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../coding-problem" beforeDir="false" afterPath="$PROJECT_DIR$/../coding-problem" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dash-workout-service" beforeDir="false" afterPath="$PROJECT_DIR$/../dash-workout-service" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dev-camper-api-typescript" beforeDir="false" afterPath="$PROJECT_DIR$/../dev-camper-api-typescript" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../django_crm/django_crm" beforeDir="false" afterPath="$PROJECT_DIR$/../django_crm/django_crm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../file-management-system" beforeDir="false" afterPath="$PROJECT_DIR$/../file-management-system" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fullcycle" beforeDir="false" afterPath="$PROJECT_DIR$/../fullcycle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my_rango" beforeDir="false" afterPath="$PROJECT_DIR$/../my_rango" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../perfect-pay-service" beforeDir="false" afterPath="$PROJECT_DIR$/../perfect-pay-service" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../places_api" beforeDir="false" afterPath="$PROJECT_DIR$/../places_api" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../scrapping_olx/Projeto_Imoveis_SP" beforeDir="false" afterPath="$PROJECT_DIR$/../scrapping_olx/Projeto_Imoveis_SP" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ticket_reservation" beforeDir="false" afterPath="$PROJECT_DIR$/../ticket_reservation" afterDir="false" />
+    <list default="true" id="c3bc0b31-80df-4707-811b-d9051736611d" name="Changes" comment="chore: update genre unit and integration tests">
+      <change afterPath="$PROJECT_DIR$/src/django_project/genre/repository.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/django_project/genre/serializers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/django_project/genre/tests/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/django_project/genre/tests/test_repository.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/django_project/genre/tests/test_views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/genre/application/use_cases/create_genre.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/genre/application/use_cases/create_genre.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/genre/domain/genre_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/genre/domain/genre_repository.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/genre/tests/application/integration/test_create_genre.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/genre/tests/application/integration/test_create_genre.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/genre/tests/application/unit/test_create_genre.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/genre/tests/application/unit/test_create_genre.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/django_project/category/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/django_project/category/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/django_project/category/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/django_project/category/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/django_project/category/repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/django_project/category/repository.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/django_project/category/tests/test_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/django_project/category/tests/test_repository.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/django_project/category/tests/test_views.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/django_project/category/tests/test_views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/django_project/category/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/django_project/category/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/django_project/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/django_project/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/django_project/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/django_project/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,112 +38,185 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 6
+  &quot;associatedIndex&quot;: 8
 }</component>
-  <component name="ProjectId" id="2q2Ama43UuabZNJbMtevEBVyC5P" />
+  <component name="ProjectId" id="2rGX0JqvX81rKYj68xYJgSNSxqX" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python tests.Python tests for test_repository.TestSave.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for tests.TestCategoryAPI.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;develop&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/marcus/Desktop/Tudo/Programacao/projetos/codeflix-catalog-admin&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "feature/genre",
+    "last_opened_file_path": "/home/marcus/Desktop/Tudo/Programacao/projetos/codeflix-catalog-admin",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/core/category/tests/application/integration" />
-      <recent name="$PROJECT_DIR$/src/core/category/application/use_cases" />
-      <recent name="$PROJECT_DIR$/src/core/category/application" />
-      <recent name="$PROJECT_DIR$/src/core/category/tests/application/unit" />
-      <recent name="$PROJECT_DIR$/src/core/category/tests/infra" />
+      <recent name="$PROJECT_DIR$/src/core/genre/tests/application/unit" />
+      <recent name="$PROJECT_DIR$/src/core/genre/tests/application/integration" />
+      <recent name="$PROJECT_DIR$/src/core/genre/application/use_cases" />
+      <recent name="$PROJECT_DIR$/src/core/genre/tests/domain" />
+      <recent name="$PROJECT_DIR$/src/core/genre/tests/infra" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/src/django_project/category/tests" />
-      <recent name="$PROJECT_DIR$/src/core/category/domain" />
-      <recent name="$PROJECT_DIR$/src/core/category/application/use_cases" />
-      <recent name="$PROJECT_DIR$/src/core/category/tests/application/unit" />
+      <recent name="$PROJECT_DIR$/src/core/genre/infra" />
+      <recent name="$PROJECT_DIR$/src/core/genre/application/use_cases" />
     </key>
-  </component>
-  <component name="RunManager" selected="Python tests.Python tests for test_repository.TestSave">
-    <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
-      <module name="codeflix-catalog-admin" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Python tests for src.django_project.category.tests.test_views.TestCategoryAPI" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="codeflix-catalog-admin" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/django_project/category" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;src.django_project.category.tests.test_views.TestCategoryAPI&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Python tests for test_repository.TestSave" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="codeflix-catalog-admin" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/django_project/category/tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_repository.TestSave&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Python tests.Python tests for test_repository.TestSave" />
-        <item itemvalue="Python tests.Python tests for src.django_project.category.tests.test_views.TestCategoryAPI" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
+    <task id="LOCAL-00001" summary="chore: add django framework">
+      <option name="closed" value="true" />
+      <created>1735392548031</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1735392548031</updated>
+    </task>
     <task active="true" id="Default" summary="Default task">
-      <changelist id="d4b9aa70-f42a-4436-b329-c411a059ea18" name="Changes" comment="" />
-      <created>1733850458120</created>
+      <changelist id="c3bc0b31-80df-4707-811b-d9051736611d" name="Changes" comment="chore: add django framework" />
+      <created>1736186180395</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1733850458120</updated>
+      <updated>1736186180395</updated>
     </task>
+    <task id="LOCAL-00002" summary="chore: create genre entity and genre unit test">
+      <option name="closed" value="true" />
+      <created>1736603097719</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1736603097719</updated>
+    </task>
+    <task id="LOCAL-00003" summary="chore: genre exceptions">
+      <option name="closed" value="true" />
+      <created>1736610444416</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1736610444416</updated>
+    </task>
+    <task id="LOCAL-00004" summary="chore: genre repository">
+      <option name="closed" value="true" />
+      <created>1736610524847</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1736610524847</updated>
+    </task>
+    <task id="LOCAL-00005" summary="chore: genre create use case">
+      <option name="closed" value="true" />
+      <created>1736610599504</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1736610599504</updated>
+    </task>
+    <task id="LOCAL-00006" summary="chore: genre create unit and integration tests">
+      <option name="closed" value="true" />
+      <created>1736610616414</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1736610616414</updated>
+    </task>
+    <task id="LOCAL-00007" summary="chore: list genre use cases">
+      <option name="closed" value="true" />
+      <created>1736688195388</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1736688195388</updated>
+    </task>
+    <task id="LOCAL-00008" summary="chore: list genre unit and integration tests">
+      <option name="closed" value="true" />
+      <created>1736688209753</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1736688209753</updated>
+    </task>
+    <task id="LOCAL-00009" summary="chore: delete genre use case">
+      <option name="closed" value="true" />
+      <created>1736689743789</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1736689743789</updated>
+    </task>
+    <task id="LOCAL-00010" summary="chore: delete genre exception">
+      <option name="closed" value="true" />
+      <created>1736689754733</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1736689754733</updated>
+    </task>
+    <task id="LOCAL-00011" summary="chore: delete genre unit and integration tests">
+      <option name="closed" value="true" />
+      <created>1736689771973</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1736689771973</updated>
+    </task>
+    <task id="LOCAL-00012" summary="chore: update genre use case">
+      <option name="closed" value="true" />
+      <created>1736798941079</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1736798941079</updated>
+    </task>
+    <task id="LOCAL-00013" summary="chore: update genre unit and integration tests">
+      <option name="closed" value="true" />
+      <created>1736798958985</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1736798958985</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="false" />
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="chore: add django framework" />
+    <MESSAGE value="chore: create genre entity and genre unit test" />
+    <MESSAGE value="chore: genre exceptions" />
+    <MESSAGE value="chore: genre repository" />
+    <MESSAGE value="chore: genre create use case" />
+    <MESSAGE value="chore: genre create unit and integration tests" />
+    <MESSAGE value="chore: list genre use cases" />
+    <MESSAGE value="chore: list genre unit and integration tests" />
+    <MESSAGE value="chore: delete genre use case" />
+    <MESSAGE value="chore: delete genre exception" />
+    <MESSAGE value="chore: delete genre unit and integration tests" />
+    <MESSAGE value="chore: update genre use case" />
+    <MESSAGE value="chore: update genre unit and integration tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: update genre unit and integration tests" />
   </component>
 </project>

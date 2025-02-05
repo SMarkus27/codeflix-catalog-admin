@@ -1,9 +1,9 @@
 import pytest
 
-from django_project.category.models import Category as CategoryModel
-from django_project.category.repository import DjangoORMCategoryRepository
+from src.django_project.category.models import Category as CategoryModel
+from src.django_project.category.repository import DjangoORMCategoryRepository
 
-from core.category.domain.category import Category
+from src.core.category.domain.category import Category
 
 
 @pytest.mark.django_db

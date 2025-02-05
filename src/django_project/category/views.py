@@ -14,7 +14,7 @@ from src.core.category.application.use_cases.list_category import ListCategoryRe
 from src.core.category.application.use_cases.update_category import UpdateCategory, UpdateCategoryRequest
 from src.django_project.category.repository import DjangoORMCategoryRepository
 from src.django_project.category.serializers import ListCategoryResponseSerializer, RetrieveCategoryRequestSerializer, \
-    CategoryResponseSerializer, RetrieveCategoryResponseSerializer, CreateCategoryRequestSerializer, \
+    RetrieveCategoryResponseSerializer, CreateCategoryRequestSerializer, \
     CreateCategoryResponseSerializer, UpdateCategoryRequestSerializer, DeleteCategoryRequestSerializer, \
     UpdatePartialCategoryRequestSerializer
 
