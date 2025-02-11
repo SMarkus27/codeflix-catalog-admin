@@ -10,12 +10,12 @@ from src.django_project.category.repository import DjangoORMCategoryRepository
 
 @pytest.fixture
 def category_movie():
-    return Category("movie", "movie description")
+    return Category(name="movie", description="movie description")
 
 
 @pytest.fixture
 def category_serie():
-    return Category("serie", "serie description")
+    return Category(name="serie", description="serie description")
 
 
 @pytest.fixture

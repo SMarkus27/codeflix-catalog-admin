@@ -1,23 +1,26 @@
-from dataclasses import dataclass, field
-from uuid import uuid4, UUID
+from dataclasses import dataclass
+
+from src.core._shared.entity import AbstractEntity
 
 
-@dataclass
-class Category:
+@dataclass(kw_only=True)
+class Category(AbstractEntity):
     name: str
     description: str = ""
     is_active: bool = True
-    id: UUID = field(default_factory=uuid4)
 
     def __post_init__(self):
         self.validate()
 
     def validate(self):
         if len(self.name) > 255:
-            raise ValueError("name must have less than 256 characters")
+            self.notification.add_error("name must have less than 256 characters")
 
         if len(self.name) == 0:
-            raise ValueError("name cannot be empty")
+            self.notification.add_error("name cannot be empty")
+
+        if self.notification.has_errors:
+            raise ValueError(self.notification.messages)
 
     def update_category(self, name, description):
         self.name = name

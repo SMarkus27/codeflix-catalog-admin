@@ -11,7 +11,7 @@ from src.core.category.infra.in_memory_category_repository import (
 class TestUpdateCategory:
 
     def test_can_update_category_name_and_description(self):
-        category = Category("filme", "Categoria para filmes")
+        category = Category(name="filme", description="Categoria para filmes")
         repository = InMemoryCategoryRepository([category])
         repository.save(category)
 

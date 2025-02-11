@@ -25,7 +25,7 @@ class CreateCategory:
 
     def execute(self, request: CreateCategoryRequest) -> CreateCategoryResponse:
         try:
-            category = Category(request.name, request.description, request.is_active)
+            category = Category(name=request.name, description=request.description, is_active=request.is_active)
         except ValueError as err:
             raise InvalidCategoryData(err)
 

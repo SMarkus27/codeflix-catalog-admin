@@ -23,9 +23,9 @@ class TestListCategory:
         assert response == ListCategoryResponse(data=[])
 
     def test_list_category(self):
-        category1 = Category("filme", "Categoria para filmes")
+        category1 = Category(name="filme", description="Categoria para filmes")
 
-        category2 = Category("Serie", "Categoria para Series")
+        category2 = Category(name="Serie", description="Categoria para Series")
         repository = InMemoryCategoryRepository()
         repository.save(category1)
         repository.save(category2)
@@ -38,16 +38,17 @@ class TestListCategory:
         assert response == ListCategoryResponse(
             data=[
                 CategoryOutput(
-                    category1.id,
-                    category1.name,
-                    category1.description,
-                    category1.is_active,
-                ),
-                CategoryOutput(
                     category2.id,
                     category2.name,
                     category2.description,
                     category2.is_active,
                 ),
+                CategoryOutput(
+                    category1.id,
+                    category1.name,
+                    category1.description,
+                    category1.is_active,
+                ),
+
             ]
         )
