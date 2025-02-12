@@ -28,7 +28,7 @@ class CategoryViewSet(ViewSet):
             current_page=current_page
         )
         use_case = ListCategory(DjangoORMCategoryRepository())
-        response = use_case.execute(input)
+        response = use_case.execute(request=input)
 
         serializer = ListCategoryResponseSerializer(instance=response)
 

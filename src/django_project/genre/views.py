@@ -9,7 +9,7 @@ from rest_framework.viewsets import ViewSet
 from src.core.genre.application.exceptions import InvalidGenre, RelatedCategoriesNotFound, GenreNotFound
 from src.core.genre.application.use_cases.create_genre import CreateGenre
 from src.core.genre.application.use_cases.delete_genre import DeleteGenre
-from src.core.genre.application.use_cases.list_genre import ListGenre
+from src.core.genre.application.use_cases.list_genre import ListGenre, ListGenreRequest
 from src.core.genre.application.use_cases.update_genre import UpdateGenre
 from src.django_project.category.repository import DjangoORMCategoryRepository
 from src.django_project.genre.repository import DjangoORMGenreRepository
@@ -19,8 +19,15 @@ from src.django_project.genre.serializers import ListGenreResponseSerializer, Cr
 
 class GenreViewSet(ViewSet):
     def list(self, request: Request) -> Response:
+        order_by = request.query_params.get("order_by", "name")
+        current_page = int(request.query_params.get("current_page", 1))
+        input = ListGenreRequest(
+            order_by=order_by,
+            current_page=current_page
+        )
         use_case = ListGenre(DjangoORMGenreRepository())
-        output = use_case.execute(input=ListGenre.Input())
+        output = use_case.execute(request=input)
+
         response = ListGenreResponseSerializer(output)
 
         return Response(
