@@ -2,7 +2,7 @@ from src.core.category.application.use_cases.list_category import (
     ListCategory,
     ListCategoryRequest,
     ListCategoryResponse,
-    CategoryOutput,
+    CategoryOutput, ListOutputMeta,
 )
 from src.core.category.domain.category import Category
 from src.core.category.infra.in_memory_category_repository import (
@@ -20,7 +20,14 @@ class TestListCategory:
 
         response = use_case.execute(request)
 
-        assert response == ListCategoryResponse(data=[])
+        assert response == ListCategoryResponse(
+            data=[],
+            meta=ListOutputMeta(
+                current_page=1,
+                per_page=2,
+                total=0
+            )
+        )
 
     def test_list_category(self):
         category1 = Category(name="filme", description="Categoria para filmes")
@@ -50,5 +57,10 @@ class TestListCategory:
                     category1.is_active,
                 ),
 
-            ]
+            ],
+            meta=ListOutputMeta(
+                current_page=1,
+                per_page=2,
+                total=2
+            )
         )
