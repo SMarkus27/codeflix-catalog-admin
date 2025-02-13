@@ -1,6 +1,7 @@
 from dataclasses import dataclass, field
 from uuid import UUID
 
+from src import config
 from src.core.category.domain.category_repository import CategoryRepository
 
 
@@ -8,7 +9,7 @@ from src.core.category.domain.category_repository import CategoryRepository
 class ListCategoryRequest:
     order_by: str = "name"
     current_page: int = 1
-
+    per_page: int = config.DEFAULT_PER_PAGE_SIZE
 
 @dataclass
 class CategoryOutput:
@@ -47,15 +48,15 @@ class ListCategory:
                 for category in categories
             ], key=lambda category: getattr(category, request.order_by))
 
-        page_offset = (request.current_page -1) * 2
-        categories_page = sorted_data[page_offset:page_offset + 2]
+        page_offset = (request.current_page -1) * request.per_page
+        categories_page = sorted_data[page_offset:page_offset + request.per_page]
 
 
         return ListCategoryResponse(
             data=categories_page,
             meta=ListOutputMeta(
                 current_page=request.current_page,
-                per_page=2,
+                per_page=request.per_page,
                 total=len(sorted_data)
             )
         )

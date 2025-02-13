@@ -6,6 +6,7 @@ from rest_framework.status import HTTP_200_OK, HTTP_201_CREATED, HTTP_400_BAD_RE
     HTTP_204_NO_CONTENT
 from rest_framework.viewsets import ViewSet
 
+from src.config import DEFAULT_PER_PAGE_SIZE
 from src.core.genre.application.exceptions import InvalidGenre, RelatedCategoriesNotFound, GenreNotFound
 from src.core.genre.application.use_cases.create_genre import CreateGenre
 from src.core.genre.application.use_cases.delete_genre import DeleteGenre
@@ -21,9 +22,11 @@ class GenreViewSet(ViewSet):
     def list(self, request: Request) -> Response:
         order_by = request.query_params.get("order_by", "name")
         current_page = int(request.query_params.get("current_page", 1))
+        per_page = int(request.query_params.get("per_page", DEFAULT_PER_PAGE_SIZE))
         input = ListGenreRequest(
             order_by=order_by,
-            current_page=current_page
+            current_page=current_page,
+            per_page=per_page
         )
         use_case = ListGenre(DjangoORMGenreRepository())
         output = use_case.execute(request=input)

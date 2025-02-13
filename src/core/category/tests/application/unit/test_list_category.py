@@ -41,7 +41,6 @@ class TestListCategory:
         request = ListCategoryRequest()
 
         response = use_case.execute(request)
-
         assert response == ListCategoryResponse(
             data=[
                 CategoryOutput(

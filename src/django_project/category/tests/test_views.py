@@ -30,7 +30,7 @@ class TestCategoryAPI:
         repository.save(category_movie)
         repository.save(category_serie)
 
-        url = "/api/categories/"
+        url = "/api/categories/?current_page=1&per_page=2"
         response = APIClient().get(url)
 
         expected_data = {
@@ -97,7 +97,7 @@ class TestCategoryAPI:
         repository.save(category_movie)
         repository.save(category_serie)
 
-        url = "/api/categories/?current_page=2"
+        url = "/api/categories/?current_page=2&per_page=2"
         response = APIClient().get(url)
 
         expected_data = {

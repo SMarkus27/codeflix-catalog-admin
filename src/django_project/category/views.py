@@ -6,6 +6,7 @@ from rest_framework.status import HTTP_200_OK, HTTP_400_BAD_REQUEST, HTTP_404_NO
     HTTP_204_NO_CONTENT
 from rest_framework.viewsets import ViewSet
 
+from src.config import DEFAULT_PER_PAGE_SIZE
 from src.core.category.application.use_cases.create_category import CreateCategoryRequest, CreateCategory
 from src.core.category.application.use_cases.delete_category import DeleteCategory, DeleteCategoryRequest
 from src.core.category.application.use_cases.exceptions import CategoryNotFound
@@ -23,9 +24,12 @@ class CategoryViewSet(ViewSet):
     def list(self, request: Request) -> Response:
         order_by = request.query_params.get("order_by", "name")
         current_page = int(request.query_params.get("current_page", 1))
+        per_page = int(request.query_params.get("per_page", DEFAULT_PER_PAGE_SIZE))
         input = ListCategoryRequest(
             order_by=order_by,
-            current_page=current_page
+            current_page=current_page,
+            per_page=per_page
+
         )
         use_case = ListCategory(DjangoORMCategoryRepository())
         response = use_case.execute(request=input)

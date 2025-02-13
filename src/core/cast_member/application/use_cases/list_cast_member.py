@@ -1,6 +1,7 @@
 from dataclasses import dataclass, field
 from uuid import UUID
 
+from src.config import DEFAULT_PER_PAGE_SIZE
 from src.core.cast_member.domain.cast_member import CastMemberType
 from src.core.cast_member.domain.cast_member_repository import CastMemberRepository
 
@@ -8,6 +9,7 @@ from src.core.cast_member.domain.cast_member_repository import CastMemberReposit
 class ListCastMemberRequest:
     order_by: str = "name"
     current_page: int = 1
+    per_page: int = DEFAULT_PER_PAGE_SIZE
 
 @dataclass
 class ListOutputMeta:
@@ -42,15 +44,15 @@ class ListCastMember:
         ], key=lambda category: getattr(category, request.order_by)
         )
 
-        page_offset = (request.current_page -1) * 2
-        categories_page = sorted_data[page_offset:page_offset + 2]
+        page_offset = (request.current_page -1) * request.per_page
+        categories_page = sorted_data[page_offset:page_offset + request.per_page]
 
 
         return ListCastMemberResponse(
             data=categories_page,
             meta=ListOutputMeta(
                 current_page=request.current_page,
-                per_page=2,
+                per_page=request.per_page,
                 total=len(sorted_data)
             )
         )

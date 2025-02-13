@@ -1,13 +1,14 @@
 from dataclasses import dataclass, field
 from uuid import UUID
 
+from src.config import DEFAULT_PER_PAGE_SIZE
 from src.core.genre.domain.genre_repository import GenreRepository
 
 @dataclass
 class ListGenreRequest:
     order_by: str = "name"
     current_page: int = 1
-
+    per_page: int = DEFAULT_PER_PAGE_SIZE
 
 @dataclass
 class GenreOutput:
@@ -46,14 +47,14 @@ class ListGenre:
             for genre in genres
         ], key=lambda genre: getattr(genre, request.order_by))
 
-        page_offset = (request.current_page -1) * 2
-        genres_page = sorted_data[page_offset:page_offset + 2]
+        page_offset = (request.current_page -1) * request.per_page
+        genres_page = sorted_data[page_offset:page_offset + request.per_page]
 
         return ListGenreResponse(
             data=genres_page,
             meta=ListOutputMeta(
                 current_page=request.current_page,
-                per_page=2,
+                per_page=request.per_page,
                 total=len(sorted_data)
             )
         )

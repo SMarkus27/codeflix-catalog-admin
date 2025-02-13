@@ -10,6 +10,7 @@ from rest_framework.status import (
     HTTP_201_CREATED,
 )
 
+from src.config import DEFAULT_PER_PAGE_SIZE
 from src.core.cast_member.application.exceptions import CastMemberNotFound, InvalidCastMember
 from src.core.cast_member.application.use_cases.create_cast_member import (
     CreateCastMember,
@@ -34,7 +35,12 @@ class CastMemberViewSet(viewsets.ViewSet):
     def list(self, request: Request) -> Response:
         order_by = request.query_params.get("order_by", "name")
         current_page = int(request.query_params.get("current_page", 1))
-        input = ListCastMemberRequest()
+        per_page = int(request.query_params.get("per_page", DEFAULT_PER_PAGE_SIZE))
+        input = ListCastMemberRequest(
+            order_by=order_by,
+            current_page=current_page,
+            per_page=per_page
+        )
         use_case = ListCastMember(cast_member_repository=DjangoORMCastMemberRepository())
         output: ListCastMemberResponse = use_case.execute(request=input)
         response_serializer = ListCastMemberResponseSerializer(output)
