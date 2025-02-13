@@ -1,6 +1,7 @@
 from rest_framework import serializers
 
 from src.core.cast_member.domain.cast_member import CastMemberType
+from src.django_project._shared.serializer import ListOutputMetaSerializer
 
 
 class CastMemberTypeField(serializers.ChoiceField):
@@ -14,16 +15,11 @@ class CastMemberTypeField(serializers.ChoiceField):
     def to_representation(self, value):
         return str(super().to_representation(value))
 
-
 class CastMemberResponseSerializer(serializers.Serializer):
     id = serializers.UUIDField()
     name = serializers.CharField(max_length=255)
     type = CastMemberTypeField(required=True)
 
-class ListOutputMetaSerializer(serializers.Serializer):
-    current_page = serializers.IntegerField()
-    per_page = serializers.IntegerField()
-    total = serializers.IntegerField()
 
 class ListCastMemberResponseSerializer(serializers.Serializer):
     data = CastMemberResponseSerializer(many=True)

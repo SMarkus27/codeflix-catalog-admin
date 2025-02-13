@@ -7,11 +7,12 @@ from rest_framework.status import HTTP_200_OK, HTTP_400_BAD_REQUEST, HTTP_404_NO
 from rest_framework.viewsets import ViewSet
 
 from src.config import DEFAULT_PER_PAGE_SIZE
+from src.core._shared.list import ListRequest
 from src.core.category.application.use_cases.create_category import CreateCategoryRequest, CreateCategory
 from src.core.category.application.use_cases.delete_category import DeleteCategory, DeleteCategoryRequest
 from src.core.category.application.use_cases.exceptions import CategoryNotFound
 from src.core.category.application.use_cases.get_category import GetCategory, GetCategoryRequest
-from src.core.category.application.use_cases.list_category import ListCategoryRequest, ListCategory
+from src.core.category.application.use_cases.list_category import ListCategory
 from src.core.category.application.use_cases.update_category import UpdateCategory, UpdateCategoryRequest
 from src.django_project.category.repository import DjangoORMCategoryRepository
 from src.django_project.category.serializers import ListCategoryResponseSerializer, RetrieveCategoryRequestSerializer, \
@@ -25,7 +26,7 @@ class CategoryViewSet(ViewSet):
         order_by = request.query_params.get("order_by", "name")
         current_page = int(request.query_params.get("current_page", 1))
         per_page = int(request.query_params.get("per_page", DEFAULT_PER_PAGE_SIZE))
-        input = ListCategoryRequest(
+        input = ListRequest(
             order_by=order_by,
             current_page=current_page,
             per_page=per_page

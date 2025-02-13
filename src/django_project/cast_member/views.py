@@ -11,6 +11,7 @@ from rest_framework.status import (
 )
 
 from src.config import DEFAULT_PER_PAGE_SIZE
+from src.core._shared.list import ListRequest
 from src.core.cast_member.application.exceptions import CastMemberNotFound, InvalidCastMember
 from src.core.cast_member.application.use_cases.create_cast_member import (
     CreateCastMember,
@@ -21,7 +22,6 @@ from src.core.cast_member.application.use_cases.delete_cast_member import Delete
 
 from src.core.cast_member.application.use_cases.list_cast_member import (
     ListCastMember,
-    ListCastMemberRequest,
     ListCastMemberResponse,
 )
 from src.core.cast_member.application.use_cases.update_cast_member import UpdateCastMember, UpdateCastMemberRequest
@@ -36,7 +36,7 @@ class CastMemberViewSet(viewsets.ViewSet):
         order_by = request.query_params.get("order_by", "name")
         current_page = int(request.query_params.get("current_page", 1))
         per_page = int(request.query_params.get("per_page", DEFAULT_PER_PAGE_SIZE))
-        input = ListCastMemberRequest(
+        input = ListRequest(
             order_by=order_by,
             current_page=current_page,
             per_page=per_page

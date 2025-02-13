@@ -5,7 +5,7 @@ import pytest
 
 from src.core.category.domain.category import Category
 from src.core.category.domain.category_repository import CategoryRepository
-from src.core.genre.application.use_cases.list_genre import ListGenre, GenreOutput, ListOutputMeta, ListGenreRequest, \
+from src.core.genre.application.use_cases.list_genre import ListGenre, GenreOutput, ListOutputMeta, ListRequest, \
     ListGenreResponse
 from src.core.genre.domain.genre import Genre
 from src.core.genre.domain.genre_repository import GenreRepository
@@ -45,7 +45,7 @@ class TestListGenre:
 
         use_case = ListGenre(mock_genre_repository)
 
-        input = ListGenreRequest()
+        input = ListRequest()
         output = use_case.execute(input)
 
         assert len(output.data) == 1
@@ -72,7 +72,7 @@ class TestListGenre:
 
         use_case = ListGenre(mock_genre_repository)
 
-        input = ListGenreRequest()
+        input = ListRequest()
         output = use_case.execute(input)
         assert len(output.data) == 1
 

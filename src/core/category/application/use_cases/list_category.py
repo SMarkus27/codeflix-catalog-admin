@@ -1,15 +1,9 @@
 from dataclasses import dataclass, field
 from uuid import UUID
 
-from src import config
+from src.core._shared.list import ListRequest, ListOutputMeta
 from src.core.category.domain.category_repository import CategoryRepository
 
-
-@dataclass
-class ListCategoryRequest:
-    order_by: str = "name"
-    current_page: int = 1
-    per_page: int = config.DEFAULT_PER_PAGE_SIZE
 
 @dataclass
 class CategoryOutput:
@@ -18,12 +12,6 @@ class CategoryOutput:
     description: str
     is_active: bool
 
-
-@dataclass
-class ListOutputMeta:
-    current_page: int
-    per_page: int
-    total: int
 
 @dataclass
 class ListCategoryResponse:
@@ -36,7 +24,7 @@ class ListCategory:
     def __init__(self, repository: CategoryRepository):
         self.repository = repository
 
-    def execute(self, request: ListCategoryRequest) -> ListCategoryResponse:
+    def execute(self, request: ListRequest) -> ListCategoryResponse:
         categories = self.repository.list()
         sorted_data = sorted([
                 CategoryOutput(

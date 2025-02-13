@@ -1,6 +1,6 @@
+from src.core._shared.list import ListRequest
 from src.core.category.application.use_cases.list_category import (
     ListCategory,
-    ListCategoryRequest,
     ListCategoryResponse,
     CategoryOutput, ListOutputMeta,
 )
@@ -16,7 +16,7 @@ class TestListCategory:
         mock_repository = InMemoryCategoryRepository([])
 
         use_case = ListCategory(mock_repository)
-        request = ListCategoryRequest()
+        request = ListRequest()
 
         response = use_case.execute(request)
 
@@ -38,7 +38,7 @@ class TestListCategory:
         repository.save(category2)
 
         use_case = ListCategory(repository)
-        request = ListCategoryRequest()
+        request = ListRequest()
 
         response = use_case.execute(request)
         print(response)

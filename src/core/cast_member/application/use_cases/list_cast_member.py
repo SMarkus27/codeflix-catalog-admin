@@ -2,20 +2,11 @@ from dataclasses import dataclass, field
 from uuid import UUID
 
 from src.config import DEFAULT_PER_PAGE_SIZE
+from src.core._shared.list import ListOutputMeta, ListRequest
 from src.core.cast_member.domain.cast_member import CastMemberType
 from src.core.cast_member.domain.cast_member_repository import CastMemberRepository
 
-@dataclass
-class ListCastMemberRequest:
-    order_by: str = "name"
-    current_page: int = 1
-    per_page: int = DEFAULT_PER_PAGE_SIZE
 
-@dataclass
-class ListOutputMeta:
-    current_page: int
-    per_page: int
-    total: int
 
 @dataclass
 class CastMemberOutput:
@@ -33,7 +24,7 @@ class ListCastMember:
     def __init__(self, cast_member_repository: CastMemberRepository):
         self.cast_member_repository = cast_member_repository
 
-    def execute(self, request: ListCastMemberRequest) -> ListCastMemberResponse:
+    def execute(self, request: ListRequest) -> ListCastMemberResponse:
         cast_members = self.cast_member_repository.list()
         sorted_data = sorted([
             CastMemberOutput(

@@ -1,6 +1,7 @@
+from src.core._shared.list import ListRequest
 from src.core.category.domain.category import Category
 from src.core.category.infra.in_memory_category_repository import InMemoryCategoryRepository
-from src.core.genre.application.use_cases.list_genre import ListGenre, GenreOutput, ListGenreRequest, ListGenreResponse, \
+from src.core.genre.application.use_cases.list_genre import ListGenre, GenreOutput, ListGenreResponse, \
     ListOutputMeta
 from src.core.genre.domain.genre import Genre
 from src.core.genre.infra.in_memory_genre_repository import InMemoryGenreRepository
@@ -25,7 +26,7 @@ class TestListGenre:
 
         use_case = ListGenre(genre_repository)
 
-        input = ListGenreRequest()
+        input = ListRequest()
         output = use_case.execute(input)
 
         assert len(output.data) == 1
@@ -52,7 +53,7 @@ class TestListGenre:
 
         use_case = ListGenre(genre_repository)
 
-        input = ListGenreRequest()
+        input = ListRequest()
         output = use_case.execute(input)
 
         assert len(output.data) == 1

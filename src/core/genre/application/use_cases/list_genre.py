@@ -2,13 +2,8 @@ from dataclasses import dataclass, field
 from uuid import UUID
 
 from src.config import DEFAULT_PER_PAGE_SIZE
+from src.core._shared.list import ListOutputMeta, ListRequest
 from src.core.genre.domain.genre_repository import GenreRepository
-
-@dataclass
-class ListGenreRequest:
-    order_by: str = "name"
-    current_page: int = 1
-    per_page: int = DEFAULT_PER_PAGE_SIZE
 
 @dataclass
 class GenreOutput:
@@ -16,13 +11,6 @@ class GenreOutput:
     name: str
     is_active: bool
     categories: set[UUID]
-
-@dataclass
-class ListOutputMeta:
-    current_page: int
-    per_page: int
-    total: int
-
 
 @dataclass
 class ListGenreResponse:
@@ -33,8 +21,7 @@ class ListGenre:
     def __init__(self, genre_repository: GenreRepository):
         self.genre_repository = genre_repository
 
-
-    def execute(self, request: ListGenreRequest) -> ListGenreResponse:
+    def execute(self, request: ListRequest) -> ListGenreResponse:
         genres = self.genre_repository.list()
 
         sorted_data = sorted([
