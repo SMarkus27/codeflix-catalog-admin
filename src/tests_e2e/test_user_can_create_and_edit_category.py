@@ -9,8 +9,14 @@ class TestCreateAndEditCategory:
         api_client = APIClient()
 
         list_response = api_client.get("/api/categories/")
-        assert list_response.data == {"data": []}
-
+        assert list_response.data == {
+            "data": [],
+            "meta": {
+                "current_page": 1,
+                "per_page": 2,
+                "total": 0
+            }
+        }
         create_response = api_client.post(
             "/api/categories/",
             data={
@@ -29,9 +35,14 @@ class TestCreateAndEditCategory:
                     "name": "Movie",
                     "description": "Movie description",
                     "is_active": True
-                }
-
-        ]}
+                },
+            ],
+            "meta": {
+                "current_page": 1,
+                "per_page": 2,
+                "total": 1
+            }
+        }
 
         update_response = api_client.put(
             f"/api/categories/{create_category_id}/",
@@ -44,6 +55,7 @@ class TestCreateAndEditCategory:
         assert update_response.status_code == 204
 
         list_response = api_client.get("/api/categories/")
+
         assert list_response.data == {
             "data": [
                 {
@@ -53,6 +65,12 @@ class TestCreateAndEditCategory:
                     "is_active": False
                 }
 
-            ]}
+            ],
+            "meta": {
+                "current_page": 1,
+                "per_page": 2,
+                "total": 1
+            }
+        }
 
 

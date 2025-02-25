@@ -10,7 +10,7 @@ from src.core.category.infra.in_memory_category_repository import (
 
 class TestDeleteCategory:
     def test_delete_category(self):
-        category = Category("filme", "categoria para filme")
+        category = Category(name="filme", description="categoria para filme")
         repository = InMemoryCategoryRepository([category])
 
         use_case = DeleteCategory(repository)

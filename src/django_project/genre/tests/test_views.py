@@ -52,27 +52,6 @@ class TestListAPI:
         url = "/api/genres/"
         response = APIClient().get(url)
 
-        # expected_response = {
-        #     "data": [
-        #         {
-        #             "id": str(genre_action.id),
-        #             "name": "Action",
-        #             "is_active": True,
-        #             "categories": [str(category_movie.id), str(category_serie.id)]
-        #         },
-        #         {
-        #             "id": str(genre_terror.id),
-        #             "name": "Terror",
-        #             "is_active": True,
-        #             "categories": []
-        #         }
-        #     ]
-        # }
-        #
-        #
-        # assert response.status_code == 200
-        # assert response == expected_response
-
         assert response.status_code == 200
         data = response.data["data"]
 

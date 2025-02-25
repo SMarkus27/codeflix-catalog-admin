@@ -1,13 +1,14 @@
 from dataclasses import dataclass, field
 from typing import Set
-from uuid import uuid4, UUID
+from uuid import UUID
+
+from src.core._shared.entity import AbstractEntity
 
 
-@dataclass
-class Genre:
+@dataclass(kw_only=True)
+class Genre(AbstractEntity):
     name: str
     is_active: bool = True
-    id: UUID = field(default_factory=uuid4)
     categories: set[UUID] = field(default_factory=set)
 
     def __post_init__(self):
@@ -15,10 +16,14 @@ class Genre:
 
     def validate(self):
         if len(self.name) > 255:
-            raise ValueError("name must have less than 256 characters")
+            self.notification.add_error("name must have less than 256 characters")
+            # raise ValueError("")
 
         if len(self.name) == 0:
-            raise ValueError("name cannot be empty")
+            self.notification.add_error("name cannot be empty")
+
+        if self.notification.has_errors:
+            raise ValueError(self.notification.messages)
 
     def change_name(self, name):
         self.name = name

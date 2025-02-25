@@ -14,11 +14,11 @@ class UpdateCastMemberRequest:
 
 
 class UpdateCastMember:
-    def __init__(self, cast_member: CastMemberRepository):
-        self.cast_member = cast_member
+    def __init__(self, cast_member_repository: CastMemberRepository):
+        self.cast_member_repository = cast_member_repository
 
     def execute(self, request: UpdateCastMemberRequest) -> None:
-        cast_member = self.cast_member.get_by_id(request.id)
+        cast_member = self.cast_member_repository.get_by_id(request.id)
         if cast_member is None:
             raise CastMemberNotFound(f"Cast member with {request.id} not found")
 
@@ -27,4 +27,4 @@ class UpdateCastMember:
         except ValueError as err:
             raise InvalidCastMember(err)
 
-        self.cast_member.update(cast_member)
+        self.cast_member_repository.update(cast_member)

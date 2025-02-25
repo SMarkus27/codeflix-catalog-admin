@@ -14,7 +14,7 @@ from src.core.category.domain.category import Category
 
 class TestDeleteCategory:
     def test_delete_category(self):
-        category = Category("filme", "categoria para filme")
+        category = Category(name="filme", description="categoria para filme")
         mock_repository = create_autospec(CategoryRepository)
         mock_repository.get_by_id.return_value = category
 

@@ -1,6 +1,8 @@
+from src.core._shared.list import ListRequest
 from src.core.category.domain.category import Category
 from src.core.category.infra.in_memory_category_repository import InMemoryCategoryRepository
-from src.core.genre.application.use_cases.list_genre import ListGenre, GenreOutput
+from src.core.genre.application.use_cases.list_genre import ListGenre, GenreOutput, ListGenreResponse, \
+    ListOutputMeta
 from src.core.genre.domain.genre import Genre
 from src.core.genre.infra.in_memory_genre_repository import InMemoryGenreRepository
 
@@ -24,10 +26,11 @@ class TestListGenre:
 
         use_case = ListGenre(genre_repository)
 
-        output = use_case.execute(ListGenre.Input())
+        input = ListRequest()
+        output = use_case.execute(input)
 
         assert len(output.data) == 1
-        assert output == ListGenre.Output(
+        assert output == ListGenreResponse(
             data=[
                 GenreOutput(
                     id=genre.id,
@@ -35,7 +38,12 @@ class TestListGenre:
                     is_active=True,
                     categories={series_category.id, movie_category.id}
                 )
-            ]
+            ],
+            meta=ListOutputMeta(
+                current_page=1,
+                per_page=2,
+                total=1
+            )
         )
 
     def test_list_genres_without_associated_categories(self):
@@ -45,10 +53,11 @@ class TestListGenre:
 
         use_case = ListGenre(genre_repository)
 
-        output = use_case.execute(ListGenre.Input())
+        input = ListRequest()
+        output = use_case.execute(input)
 
         assert len(output.data) == 1
-        assert output == ListGenre.Output(
+        assert output == ListGenreResponse(
             data=[
                 GenreOutput(
                     id=genre.id,
@@ -56,5 +65,10 @@ class TestListGenre:
                     is_active=True,
                     categories=set()
                 )
-            ]
+            ],
+            meta=ListOutputMeta(
+                current_page=1,
+                per_page=2,
+                total=1
+            )
         )

@@ -5,25 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c3bc0b31-80df-4707-811b-d9051736611d" name="Changes" comment="chore: update genre unit and integration tests">
-      <change afterPath="$PROJECT_DIR$/src/django_project/genre/repository.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/django_project/genre/serializers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/django_project/genre/tests/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/django_project/genre/tests/test_repository.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/django_project/genre/tests/test_views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/core/_shared/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/core/_shared/entity.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/core/_shared/notification.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/genre/application/use_cases/create_genre.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/genre/application/use_cases/create_genre.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/genre/domain/genre_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/genre/domain/genre_repository.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/genre/tests/application/integration/test_create_genre.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/genre/tests/application/integration/test_create_genre.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/genre/tests/application/unit/test_create_genre.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/genre/tests/application/unit/test_create_genre.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/django_project/category/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/django_project/category/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/django_project/category/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/django_project/category/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/category/application/use_cases/create_category.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/category/application/use_cases/create_category.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/category/application/use_cases/list_category.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/category/application/use_cases/list_category.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/category/domain/category.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/category/domain/category.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/category/tests/application/integration/test_delete_category.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/category/tests/application/integration/test_delete_category.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/category/tests/application/integration/test_get_category.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/category/tests/application/integration/test_get_category.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/category/tests/application/integration/test_list_category.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/category/tests/application/integration/test_list_category.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/category/tests/application/integration/test_update_category.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/category/tests/application/integration/test_update_category.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/category/tests/application/unit/test_delete_category.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/category/tests/application/unit/test_delete_category.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/category/tests/application/unit/test_get_category.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/category/tests/application/unit/test_get_category.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/category/tests/application/unit/test_list_category.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/category/tests/application/unit/test_list_category.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/category/tests/application/unit/test_update_category.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/category/tests/application/unit/test_update_category.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/category/tests/domain/test_category.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/category/tests/domain/test_category.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/category/tests/infra/test_in_memory_category_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/category/tests/infra/test_in_memory_category_repository.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/django_project/category/repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/django_project/category/repository.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/django_project/category/tests/test_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/django_project/category/tests/test_repository.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/django_project/category/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/django_project/category/serializers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/django_project/category/tests/test_views.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/django_project/category/tests/test_views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/django_project/category/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/django_project/category/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/django_project/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/django_project/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/django_project/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/django_project/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +54,7 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "feature/genre",
+    "git-widget-placeholder": "develop",
     "last_opened_file_path": "/home/marcus/Desktop/Tudo/Programacao/projetos/codeflix-catalog-admin",
     "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
@@ -66,6 +68,7 @@
       <recent name="$PROJECT_DIR$/src/core/genre/tests/infra" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/core/_shared" />
       <recent name="$PROJECT_DIR$/src/core/genre/infra" />
       <recent name="$PROJECT_DIR$/src/core/genre/application/use_cases" />
     </key>

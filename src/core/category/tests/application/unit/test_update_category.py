@@ -11,7 +11,7 @@ from src.core.category.domain.category import Category
 class TestUpdateCategory:
 
     def test_update_category_name(self):
-        category = Category("filme", "Categoria para filmes")
+        category = Category(name="filme", description="Categoria para filmes")
         mock_repository = create_autospec(CategoryRepository)
         mock_repository.get_by_id.return_value = category
 
@@ -26,7 +26,7 @@ class TestUpdateCategory:
         mock_repository.update.assert_called_once_with(category)
 
     def test_update_category_description(self):
-        category = Category("filme", "Categoria para filmes")
+        category = Category(name="filme", description="Categoria para filmes")
         mock_repository = create_autospec(CategoryRepository)
         mock_repository.get_by_id.return_value = category
 
@@ -41,7 +41,7 @@ class TestUpdateCategory:
         mock_repository.update.assert_called_once_with(category)
 
     def test_can_deactivate_category(self):
-        category = Category("filme", "Categoria para filmes")
+        category = Category(name="filme", description="Categoria para filmes")
         mock_repository = create_autospec(CategoryRepository)
         mock_repository.get_by_id.return_value = category
 
@@ -54,7 +54,7 @@ class TestUpdateCategory:
         mock_repository.update.assert_called_once_with(category)
 
     def test_cam_activate_category(self):
-        category = Category("filme", "Categoria para filmes", False)
+        category = Category(name="filme", description="Categoria para filmes", is_active=False)
         mock_repository = create_autospec(CategoryRepository)
         mock_repository.get_by_id.return_value = category
 

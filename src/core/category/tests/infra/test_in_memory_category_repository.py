@@ -8,7 +8,7 @@ class TestInMemoryCategoryRepository:
 
     def test_can_save_category(self):
         repository = InMemoryCategoryRepository()
-        category = Category("filme", "Categoria filmes")
+        category = Category(name="filme", description="Categoria filmes")
 
         repository.save(category)
 

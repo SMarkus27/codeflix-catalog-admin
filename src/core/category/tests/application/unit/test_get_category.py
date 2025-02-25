@@ -11,7 +11,7 @@ from src.core.category.domain.category import Category
 
 class TestGetCategory:
     def test_get_category(self):
-        category = Category("filme", "Categoria para filmes")
+        category = Category(name="filme", description="Categoria para filmes")
         mock_repository = MagicMock(CategoryRepository)
         mock_repository.get_by_id.return_value = category
 

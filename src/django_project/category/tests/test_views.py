@@ -10,12 +10,12 @@ from src.django_project.category.repository import DjangoORMCategoryRepository
 
 @pytest.fixture
 def category_movie():
-    return Category("movie", "movie description")
+    return Category(name="movie", description="movie description")
 
 
 @pytest.fixture
 def category_serie():
-    return Category("serie", "serie description")
+    return Category(name="serie", description="serie description")
 
 
 @pytest.fixture
@@ -30,7 +30,7 @@ class TestCategoryAPI:
         repository.save(category_movie)
         repository.save(category_serie)
 
-        url = "/api/categories/"
+        url = "/api/categories/?current_page=1&per_page=2"
         response = APIClient().get(url)
 
         expected_data = {
@@ -47,11 +47,71 @@ class TestCategoryAPI:
                     "description": category_serie.description,
                     "is_active": category_serie.is_active
                 }
-            ]
+            ],
+            "meta": {
+                "current_page": 1,
+                "per_page": 2,
+                "total": 2
+            }
         }
 
         assert response.status_code == 200
         assert response.data == expected_data
+
+
+    def test_list_categories_order_by_name(self, category_movie: Category, category_serie: Category, category_repository: DjangoORMCategoryRepository):
+        repository = category_repository
+        repository.save(category_movie)
+        repository.save(category_serie)
+
+        url = "/api/categories/?name"
+        response = APIClient().get(url)
+
+        expected_data = {
+            "data": [
+                {
+                    "id": str(category_movie.id),
+                    "name": category_movie.name,
+                    "description": category_movie.description,
+                    "is_active": category_movie.is_active
+                },
+                {
+                    "id": str(category_serie.id),
+                    "name": category_serie.name,
+                    "description": category_serie.description,
+                    "is_active": category_serie.is_active
+                }
+            ],
+            "meta": {
+                "current_page": 1,
+                "per_page": 2,
+                "total": 2
+            }
+        }
+
+        assert response.status_code == 200
+        assert response.data == expected_data
+
+    def test_list_categories_current_page_2(self, category_movie: Category, category_serie: Category, category_repository: DjangoORMCategoryRepository):
+        repository = category_repository
+        repository.save(category_movie)
+        repository.save(category_serie)
+
+        url = "/api/categories/?current_page=2&per_page=2"
+        response = APIClient().get(url)
+
+        expected_data = {
+            "data": [],
+            "meta": {
+                "current_page": 2,
+                "per_page": 2,
+                "total": 2
+            }
+        }
+
+        assert response.status_code == 200
+        assert response.data == expected_data
+
 
 
 @pytest.mark.django_db

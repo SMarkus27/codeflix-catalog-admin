@@ -9,7 +9,7 @@ class TestGenre:
 
     def test_name_is_required(self):
         with pytest.raises(
-            TypeError, match="missing 1 required positional argument: 'name'"
+            TypeError, match="missing 1 required keyword-only argument: 'name'"
         ):
             Genre()
 

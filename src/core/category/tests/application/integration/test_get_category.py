@@ -16,7 +16,7 @@ from src.core.category.infra.in_memory_category_repository import (
 
 class TestGetCategory:
     def test_get_category(self):
-        category = Category("filme", "categoria para filme")
+        category = Category(name="filme", description="categoria para filme")
         repository = InMemoryCategoryRepository([category])
 
         use_case = GetCategory(repository)
@@ -29,7 +29,7 @@ class TestGetCategory:
         )
 
     def test_when_category_does_exist_then_raise_exception(self):
-        category = Category("filme", "categoria para filme")
+        category = Category(name="filme", description="categoria para filme")
         repository = InMemoryCategoryRepository([category])
 
         use_case = GetCategory(repository)

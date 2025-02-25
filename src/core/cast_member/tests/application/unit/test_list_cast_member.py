@@ -2,7 +2,8 @@ from unittest.mock import create_autospec
 
 import pytest
 
-from src.core.cast_member.application.use_cases.list_cast_member import ListCastMember, ListCastMemberRequest
+from src.core._shared.list import ListRequest
+from src.core.cast_member.application.use_cases.list_cast_member import ListCastMember
 from src.core.cast_member.domain.cast_member import CastMember, CastMemberType
 from src.core.cast_member.domain.cast_member_repository import CastMemberRepository
 
@@ -34,7 +35,7 @@ class TestListCastMember:
     def test_list_cast_member(self, mock_cast_member_repository: CastMemberRepository):
         use_case = ListCastMember(mock_cast_member_repository)
 
-        response = use_case.execute(ListCastMemberRequest())
+        response = use_case.execute(ListRequest())
 
         assert len(response.data) == 2
         assert response.data[0].name == "Bruce Willis"
@@ -46,6 +47,6 @@ class TestListCastMember:
 
     def test_list_no_cast_member_return_empty_list(self, mock_empty_repository: CastMemberRepository):
         use_case = ListCastMember(mock_empty_repository)
-        response = use_case.execute(ListCastMemberRequest())
+        response = use_case.execute(ListRequest())
 
         assert response.data == []
